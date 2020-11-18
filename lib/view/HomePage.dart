@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/bottm_nav_bar.dart';
+
 class HomePage extends StatelessWidget {
   static const routeName = '/HomePage';
 
@@ -20,6 +22,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
