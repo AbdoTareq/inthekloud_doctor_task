@@ -1,3 +1,4 @@
+import 'package:animated_splash/animated_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_template/utils/my_translation.dart';
@@ -9,9 +10,9 @@ import 'constants.dart';
 
 Future<void> main() async {
   await GetStorage.init();
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: kPrimaryColor // status bar color
-  ));
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: kPrimaryColor // status bar color
+          ));
   runApp(MyApp());
 }
 
@@ -26,7 +27,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: kPrimaryColor,
       ),
-      home: HomePage(),
+      home: AnimatedSplash(
+        imagePath: 'assets/images/logo.png',
+        title: 'Digital clinic',
+        home: HomePage(),
+        duration: 2500,
+        type: AnimatedSplashType.StaticDuration,
+      ),
     );
   }
 }

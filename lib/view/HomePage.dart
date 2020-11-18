@@ -10,9 +10,14 @@ class HomePage extends StatelessWidget {
         title: Text('Your Title'),
       ),
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset('assets/images/logo.png'),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(child: Image.asset('assets/images/logo.png')),
+            SizedBox(
+              height: 20,
+            ),
+          ],
         ),
       ),
     );
