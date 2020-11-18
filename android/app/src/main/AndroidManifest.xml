@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.simplute.flutter_template">
    <application
-        android:label="flutter_template"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Doctors task"
+        android:icon="@mipmap/logo">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

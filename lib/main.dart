@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_template/utils/my_translation.dart';
 import 'package:flutter_template/view/HomePage.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 import 'constants.dart';
 
-void main() {
+Future<void> main() async {
+  await GetStorage.init();
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: kPrimaryColor // status bar color
+  ));
   runApp(MyApp());
 }
 
@@ -14,16 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      // this for alice debugging network calls
-      navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      // locale: egyptianArabic,
+      title: 'Doctors task',
       translations: MyTranslation(),
-      // defaultTransition: Transition.leftToRight,
       theme: ThemeData(
         primarySwatch: kPrimaryColor,
-        fontFamily: 'Cairo',
       ),
       home: HomePage(),
     );
