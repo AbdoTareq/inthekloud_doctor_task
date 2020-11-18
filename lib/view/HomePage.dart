@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/view/widgets/cust_app_bar.dart';
+import 'package:flutter_template/view/widgets/search_field.dart';
 
 import 'widgets/bottm_nav_bar.dart';
 
@@ -8,19 +10,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Your Title'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SizedBox(child: Image.asset('assets/images/logo.png')),
-            SizedBox(
-              height: 20,
-            ),
-          ],
-        ),
+      appBar: CustAppBar(title: 'All Accounts', subTitle: 'null'),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SearchField(),
+          SizedBox(
+            height: 20,
+          ),
+          SizedBox(child: Image.asset('assets/images/logo.png')),
+        ],
       ),
       bottomNavigationBar: BottomNavBar(),
     );
