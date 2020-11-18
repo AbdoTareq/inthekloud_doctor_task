@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'filter_bottom_sheet.dart';
+
 class CustAppBar extends StatelessWidget with PreferredSizeWidget {
   const CustAppBar({
     Key key,
@@ -25,7 +27,9 @@ class CustAppBar extends StatelessWidget with PreferredSizeWidget {
               icon: Icon(
                 Icons.sort,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.bottomSheet(FilterBottomSheet());
+              },
             ),
             IconButton(
               icon: Icon(

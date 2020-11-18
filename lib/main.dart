@@ -1,7 +1,6 @@
 import 'package:animated_splash/animated_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/utils/my_translation.dart';
 import 'package:flutter_template/view/HomePage.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -26,7 +25,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Doctors task',
-      translations: MyTranslation(),
       theme: ThemeData(
         primarySwatch: kPrimaryColor,
       ),
